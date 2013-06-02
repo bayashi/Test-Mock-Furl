@@ -113,11 +113,11 @@ The mock L<Furl::HTTP> object - a Test::MockObject object
 
 =item $Mock_furl_req, $Mock_furl_request
 
-The mock Furl::Request object - a Test::MockObject object
+The mock L<Furl::Request> object - a Test::MockObject object
 
 =item $Mock_furl_res, $Mock_furl_response
 
-The mock Furl::Response object - a Test::MockObject object
+The mock L<Furl::Response> object - a Test::MockObject object
 
 =back
 
