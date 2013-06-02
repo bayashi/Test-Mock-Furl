@@ -5,6 +5,7 @@ use Test::MockObject;
 use parent 'Exporter';
 our @EXPORT = qw/
     $Mock_furl
+    $Mock_furl_http
     $Mock_furl_req $Mock_furl_request
     $Mock_furl_res $Mock_furl_resp $Mock_furl_response
 /;
@@ -16,6 +17,7 @@ BEGIN {
     my $mo = Test::MockObject->new;
     my @mock_classes = (
         [ 'Furl'     => '$Mock_furl' ],
+        [ 'HTTP'     => '$Mock_furl_http' ],
         [ 'Request'  => '$Mock_furl_request $Mock_furl_req' ],
         [ 'Response' => '$Mock_furl_response $Mock_furl_resp $Mock_furl_res' ],
     );
