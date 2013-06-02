@@ -87,7 +87,6 @@ And mock test of Furl::HTTP is like below.
         method => 'GET', host => 'example.com', port => 80, path => '/',
     );
 
-    isa_ok $furl, 'Test::MockObject';
     is $res[4], 'mock me baby!';
 
     done_testing;
