@@ -42,6 +42,9 @@
       "Test::Mock::Furl::Furl" : {
          "file" : "lib/Test/Mock/Furl/Furl.pm"
       },
+      "Test::Mock::Furl::HTTP" : {
+         "file" : "lib/Test/Mock/Furl/HTTP.pm"
+      },
       "Test::Mock::Furl::Request" : {
          "file" : "lib/Test/Mock/Furl/Request.pm"
       },
