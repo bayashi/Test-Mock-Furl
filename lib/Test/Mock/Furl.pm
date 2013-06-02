@@ -48,6 +48,8 @@ Test::Mock::Furl - Mocks Furl for testing
 
 =head1 SYNOPSIS
 
+The test of mocked Furl.
+
     use Test::More;
     use Test::Mock::Furl;
     use Furl;
@@ -67,6 +69,29 @@ Test::Mock::Furl - Mocks Furl for testing
 
     done_testing;
 
+And mock test of Furl::HTTP is like below.
+
+    use Test::More;
+    use Test::Mock::Furl;
+
+    use Furl::HTTP;
+
+    $Mock_furl_http->mock(
+        request => sub {
+            ( 1, 200, 'OK', ['content-type' => 'text/plain'], 'mock me baby!' );
+        },
+    );
+
+    my $furl = Furl::HTTP->new;
+    my @res  = $furl->request(
+        method => 'GET', host => 'example.com', port => 80, path => '/',
+    );
+
+    isa_ok $furl, 'Test::MockObject';
+    is $res[4], 'mock me baby!';
+
+    done_testing;
+
 
 =head1 DESCRIPTION
 
@@ -81,6 +106,10 @@ The following variables are exported by default:
 =item $Mock_furl
 
 The mock L<Furl> object - a Test::MockObject object
+
+=item $Mock_furl_http
+
+The mock L<Furl::HTTP> object - a Test::MockObject object
 
 =item $Mock_furl_req, $Mock_furl_request
 
