@@ -17,6 +17,7 @@
       "build" : {
          "requires" : {
             "Furl" : "0",
+            "Test::AllModules" : "0",
             "Test::More" : "0.88"
          }
       },
