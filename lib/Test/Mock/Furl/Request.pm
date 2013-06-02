@@ -33,7 +33,8 @@ $Mock_furl_req->mock(
     },
 );
 
-package Furl::Request;
+package # hide from PAUSE
+    Furl::Request;
 
 our $VERSION = 'Mocked';
 
