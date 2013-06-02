@@ -16,6 +16,7 @@
    "prereqs" : {
       "build" : {
          "requires" : {
+            "Furl" : "0",
             "Test::More" : "0.88"
          }
       },
@@ -26,7 +27,8 @@
       },
       "runtime" : {
          "requires" : {
-            "Carp" : "0",
+            "Exporter" : "0",
+            "Test::MockObject" : "0",
             "perl" : "5.008001"
          }
       }
