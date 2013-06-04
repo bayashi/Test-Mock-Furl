@@ -12,7 +12,6 @@ my $builder = Module::Build->new(
     },
     build_requires      => {
         'Test::More' => 0.88,
-        'Test::AllModules' => 0,
         'Furl' => 0,
     },
     requires => {
